@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ADICIONAR</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+        <div class="container d-flex justify-content-between">
+            <a href="{% url 'tarefas:listar' %}" class="navbar-brand d-flex align-items-center">
+                <strong>ADICIONAR</strong>
+            </a>
+        </div>
+</head>
+
+<body>
+
+<main role="main" class="container">
+
+    <div class="container">
+        <form method=POST>
+            {% csrf_token %}
+
+            <label class="h4">Nome</label>
+            <input type="text" class="form-control" {{ form.titulo }}
+
+            <label class="h4">Conteudo</label>
+            <input type="text" class="form-control" {{ form.conteudo }}
+
+            <label class="h4">Concluído?</label>
+            <select type="text" class="form-control" {{ form.status }}
+
+            <a href="{% url 'tarefas:adicionar' %}">
+                <button style="color:black">Adicionar</button>
+            </a>
+        </form>
+
+    </div>
+
+</main>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

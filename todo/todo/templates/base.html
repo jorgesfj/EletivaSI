@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>INICIO</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+
+        <div class="container d-flex justify-content-between">
+            <a href="{% url 'tarefas:listar' %}" class="navbar-brand d-flex align-items-center">
+                <strong>INICIO</strong>
+            </a>
+        </div>
+
+</head>
+<body>
+
+
+<main role="main">
+
+    <section >
+        <div class="container">
+            <h1>Tarefas</h1>
+            <p>
+                <a href="{% url 'tarefas:adicionar' %}">ADD</a>
+            </p>
+        </div>
+    </section>
+
+
+
+
+</main>
+
+{% block content %}{% endblock %}
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>
