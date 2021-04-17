@@ -1,0 +1,35 @@
+###
+GET http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3000/users?age= HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3000/user?cell=82999999999 HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "name":"Aliny",
+    "cpf": 11111111111,
+    "age": 22,
+    "cell":82999999999 
+}
+
+
+###
+PATCH http://localhost:3000/users/ HTTP/1.1
+content-type: application/json
+
+{
+
+}
+
+###
+DELETE  http://localhost:3000/users/6054ba22934db3306cd2ef5b HTTP/1.1
+content-type: application/json

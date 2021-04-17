@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EDITAR</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+        <div class="container d-flex justify-content-between">
+            <a href="{% url 'tarefas:listar' %}" class="navbar-brand d-flex align-items-center">
+                <strong>EDITAR</strong>
+            </a>
+    </div>
+</head>
+
+<body>
+
+<main role="main" class="container">
+
+    <div class="container">
+        <form method=POST>
+            {% csrf_token %}
+
+            <label class="h4">Nome</label>
+            <div><input type="text" class="form-control"{{ form.titulo }}</div>
+
+            <label class="h4">Conteudo</label>
+            <textarea class="form-control" {{ form.conteudo }}
+
+            <label class="h4">Concluido?</label>
+            <div><select type="text" class="form-control" {{ form.status }}</div>
+
+                <a href="{% url 'tarefas:adicionar' %}">
+                    <button style="color:black">Editar Tarefa</button>
+                </a>
+        </form>
+
+    </div>
+
+</main>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>
